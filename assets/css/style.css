@@ -480,6 +480,38 @@ header.active .main-header .wrapper{
 }
 /* Our Solutions Section CSS End */
 
+/* About Our Company Section CSS Start */
+.about-company-section { padding: 150px 0;}
+
+.about-company { 
+  display: flex; 
+  background-color: #F7F7F7;
+}
+
+.about-company figure { flex-basis: 50%; }
+.about-company-content { flex-basis: 50%; }
+
+.about-company-content { 
+  flex-basis: 55%; 
+  padding: 35px 75px;
+}
+
+.about-company-content .sub-heading { text-align: left;}
+
+.about-company-content .section-heading {
+  text-align: left;
+  text-transform: none;
+}
+
+.about-company-content p {
+  padding: 40px 0;
+  color: #7E807F;
+  line-height: 2;
+}
+.about-company-content p:last-of-type { padding-top: 0; }
+/* About Our Company Section CSS End */
+
+
 /*=================================
 main styling ends here
 =================================*/
