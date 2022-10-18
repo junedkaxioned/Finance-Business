@@ -79,6 +79,13 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
 body {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -107,9 +114,11 @@ li {
 =================================*/
 
 header {
-  position: sticky;
-  background-color: transparent;
+  width: 100%;
+  /* position: fixed; */
+  z-index: 9999;
   top: 0;
+  background-color: transparent;
 }
 
 header.active .main-header .wrapper{
@@ -189,8 +198,9 @@ header.active .main-header .wrapper{
 .nav-list { 
   padding: 10px 10px;
   border-bottom: transparent;
-  font-size: 16px;
   color: #fff;
+  font-size: 16px;
+  text-transform: capitalize;
   transition: all .5s;
 }
 
@@ -232,39 +242,220 @@ header.active .main-header .wrapper{
   main styling starts here
 =================================*/
 
+/* Banner Section CSS Start */
+.banner-section { margin-top: 30px;}
+.banner-section .wrapper { width: 100%; position: relative;}
+.color-green { color: #A3C63B; }
+
+.sliders { 
+  display: flex; 
+  flex-direction: row;
+}
+
+.slider {
+  position: relative; 
+  flex-basis: 0; 
+  overflow: hidden;
+}
+
+.slider.active { flex-basis: 100%; }
+
+.banner-content { 
+  padding: 0px 47% 0px 12%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.top-head {
+  padding-bottom: 18px;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.banner-heading {
+  padding-right: 5%; 
+  color: #fff;
+  font-size: 46px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.banner-content p {
+  padding: 32px 0;
+  color: #fff;
+  line-height: 2;
+}
+
+.btn {
+  padding: 12px 26px;
+  border: 2px solid #A3C63B;
+  border-radius: 50px;
+  background-color: #A3C63B;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.slider .contact-us { margin: 8px 0 0 6px; }
+
+.slider-btn {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.prev-btn::before { content: '\f053'; }
+.next-btn::before { content: '\f054'; }
+.prev-btn { margin-left: 1%;}
+
+.prev-btn::before,
+.next-btn::before  {
+  font-family: "FontAwesome";
+  float: left;
+  text-indent: 0;
+}
+
+.prev-btn, 
+.next-btn {
+  padding: 16px;
+  border-radius: 0 3px 3px 0;
+  position: inherit;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+}
+
+.next-btn {
+  margin-right: 1%;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* Banner Section CSS End */
+
+/* Request a Call Section CSS Start */
+.request-a-call {
+  width: 100%;
+  background-color: #A3C63B;
+  color: #fff;
+}
+
+.request-a-call .wrapper { 
+  padding: 36px 0; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.call-content h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.call-content p { 
+  padding: 10px 0; 
+  letter-spacing: .6px;
+}
+
+.request-a-call .contact-us {
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #fff;
+}
+/* Request a Call Section CSS End */
+
+/* Financial Service Section CSS start */
+.service-section { padding: 150px 0; }
+
+.section-heading { 
+  color: #252723;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sub-heading {
+  padding: 18px 0;
+  display: block;
+  color: #898170;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.financial-services {
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 34px;
+}
+
+.service-content {
+  padding: 32px 36px;
+  background-color: #F7F7F7;
+}
+
+.service-content h3 {
+  color: #252723;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.service-content p {
+  padding: 20px 0;
+  color: #857B7A;
+  line-height: 2;
+}
+/* Financial Service Section CSS End */
 
 
 /*=================================
-  main styling ends here
+main styling ends here
 =================================*/
 
 /*=================================
-  footer styling starts here
+footer styling starts here
 =================================*/ 
 
 
 
- /*=================================
-  footer styling ends here
+/*=================================
+footer styling ends here
 =================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
 @media only screen and (min-width: 1024px) {
-
+  
 
   .phone-no a:hover, 
   .phone-no a:hover::before { 
     opacity: 80%;
   }
-
+  
   .facebook:hover:after { color: #1877f2; }
   .twitter:hover:after { color: #1da1f2; }
   .linkedin:hover:after { color: #0a66c2; }
   .behance:hover:after { color: #1769ff; }
-
+  
   .nav-list:hover {
     color: #A3C63B;
     border-bottom: 4px solid #A3C63B;
   }
-}  
+  
+  .prev-btn:hover, 
+  .next-btn:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+}
