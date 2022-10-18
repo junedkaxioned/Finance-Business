@@ -568,7 +568,7 @@ header.active .main-header .wrapper{
   width: 100%;
   padding: 62px;
   border-radius: 5px;
-  margin: 68px 0;
+  margin: 68px 0 0;
   background-color: #A4C63B;
   display: flex;
   flex-direction: column;
@@ -616,6 +616,19 @@ header.active .main-header .wrapper{
 
 .form-control .btn { border-color: #fff; }
 /* Call Back Section CSS End*/
+
+/* Clint Logo Section CSS Start */
+.client-logos-section {
+  padding: 60px 60px 90px;
+  background-color: #F7F7F7;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Clint Logo Section CSS End */
 
 /*=================================
 main styling ends here
