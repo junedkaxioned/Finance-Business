@@ -517,9 +517,9 @@ header.active .main-header .wrapper{
 
 .testimonials {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 30px;
+  justify-content: space-between;
 }
 
 .testimonial {
@@ -529,8 +529,8 @@ header.active .main-header .wrapper{
 
 .testimonial figure figcaption {
   padding: 30px;
-  background-color: #fff;
   border-radius: 8px;
+  background-color: #fff;
 }
 
 .testimonial h3 {
@@ -547,9 +547,9 @@ header.active .main-header .wrapper{
 }
 
 .testimonial figure img {
-  margin: 25px;
   width: 60px;
   border-radius: 50%;
+  margin: 25px;
 }
 
 .testimonial p {
@@ -560,6 +560,62 @@ header.active .main-header .wrapper{
 }
 /* Testimonial Section CSS End */
 
+/* Call Back Section CSS Start*/
+
+.call-back-section { padding: 150px 0; }
+
+.form {
+  width: 100%;
+  padding: 62px;
+  border-radius: 5px;
+  margin: 68px 0;
+  background-color: #A4C63B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-grp-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.form-grp { flex-basis: 33.33%; }
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-input::placeholder,
+.textarea::placeholder {
+  color: #aeafaf;
+}
+
+.form-textarea { 
+  width: 100%;
+  padding: 36px 0; 
+}
+
+.textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-control .btn { border-color: #fff; }
+/* Call Back Section CSS End*/
 
 /*=================================
 main styling ends here
