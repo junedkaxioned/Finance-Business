@@ -16,8 +16,8 @@
   <div class="container">
     <!--header section start-->
     <header>
-      <div class="wrapper">
-        <div class="top-bar">
+      <div class="top-bar">
+        <div class="wrapper">
           <ul class="time-and-contact">
             <li class="time">Mon-Fri 09:00-17:00</li>
             <li class="phone-no"><a href="tel:0900800760" title="Call Us Know">090-080-0760</a></li>
@@ -29,7 +29,9 @@
             <li><a href="#FIXME" class="icon behance text-indent" title="Follow us on Behance">behance</a></li>
           </ul>
         </div>
-        <div class="main-header">
+      </div>
+      <div class="main-header">
+        <div class="wrapper">
           <h1>
             <a href="#FIXME" title="Finance Business Logo">
               <img src="https://placehold.jp/A4C63B/ffffff/236x20.png?text=Logo" alt="Finance Business Logo">
@@ -37,13 +39,15 @@
           </h1>
           <nav>
             <ul class="navbar">
-              <li><a href="#FIXME" class="nav-list" title="Home">Home</a></li>
+              <li><a href="index.html" class="nav-list active" title="Home">Home</a></li>
               <li><a href="#FIXME" class="nav-list" title="About Us">About Us</a></li>
               <li><a href="our-services.html" class="nav-list" title="Our Services">Our Services</a></li>
               <li><a href="contact-us.html" class="nav-list" title="Contact Us">Contact Us</a></li>
             </ul>
-          </nav>
+          </nav>  
           <div class="hamburger">
+            <span class="bar text-indent">hamburger</span>
+            <span class="bar text-indent">hamburger</span>
             <span class="bar text-indent">hamburger</span>
           </div>
         </div>
@@ -56,7 +60,7 @@
       <section class="banner-section">
         <div class="wrapper">
           <ul class="sliders">
-            <li class="slider">
+            <li class="slider active">
               <figure>
                 <img src="./assets/images/slide_01.jpg" alt="slider 1">
               </figure>
@@ -108,19 +112,21 @@
       <!-- Banner Section End -->
 
       <!-- Request a Call Section Start -->
-      <div class="wrapper request-a-call">
-        <div class="call-content">
-          <h2>Request a call back right now?</h2>
-          <p>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p>
+      <div class="request-a-call">
+        <div class="wrapper">
+          <div class="call-content">
+            <h2>Request a call back right now?</h2>
+            <p>Mauris ut dapibus velit cras interdum nisl ac urna tempor mollis.</p>
+          </div>
+          <a href="contact-us.html" class="btn contact-us" title="Go to Contact Us Page">contact us</a>
         </div>
-        <a href="contact-us.html" class="btn contact-us" title="Go to Contact Us Page">contact us</a>
       </div>
       <!-- Request a Call Section End -->
 
       <!-- Finiancal Service Section Start -->
       <section class="service-section">
         <div class="wrapper">
-          <h2>Financial <span class="color-green">Services</span></h2>
+          <h2 class="section-heading">Financial <span class="color-green">Services</span></h2>
           <span class="sub-heading">ALIQUAM ID UR NA IMPERDIET LIBERO MOLLIS HENDRERIT</span>
           <ul class="financial-services">
             <li class="service">
@@ -169,7 +175,7 @@
         <div class="wrapper business-growth">
           <div class="business-growth-content">
             <span class="sub-heading">LOREM IPSUM DOLOR SIT AMET</span>
-            <h2>Our solutions for your <span class="color-green">business growth</span></h2>
+            <h2 class="section-heading">Our solutions for your <span class="color-green">business growth</span></h2>
             <p>Pellentesque ultrices at turpis in vestibulum. Aenean pretium elit nec
               congue elementum. Nulla luctus laoreet porta. Maecenas at nisi
               tempus, porta metus vitae, faucibus augue.
@@ -181,19 +187,19 @@
           </div>
           <ul class="counters">
             <li class="counter-container">
-              <span class="counter" data-target="945">945</span>
+              <span class="counter color-green" data-target="945">945</span>
               <h3>Work Hours</h3>
             </li>
             <li class="counter-container">
-              <span class="counter" data-target="1280">1280</span>
+              <span class="counter color-green" data-target="1280">1280</span>
               <h3>Great Reviews</h3>
             </li>
             <li class="counter-container">
-              <span class="counter" data-target="578">578</span>
+              <span class="counter color-green" data-target="578">578</span>
               <h3>Project Done</h3>
             </li>
             <li class="counter-container">
-              <span class="counter" data-target="26">26</span>
+              <span class="counter color-green" data-target="26">26</span>
               <h3>Awards Won</h3>
             </li>
           </ul>
@@ -209,7 +215,7 @@
           </figure>
           <div class="about-company-content">
             <span class="sub-heading">who we are</span>
-            <h2>Get to know about <span class="color-green">our company</span></h2>
+            <h2 class="section-heading">Get to know about <span class="color-green">our company</span></h2>
             <p>Curabitur pulvinar sem a leo tempus facilisis. Sed non sagittis neque. Nulla consequat tellus nibh, id molestie felis sagittis ut.
               Nam ullamcorper tempus ipsum in cursus
             </p>
@@ -225,8 +231,8 @@
       <!-- Testimonial Section Start -->
       <section class="testimonial-section">
         <div class="wrapper">
-          <h2>What they say <span class="color-green">about us</span></h2>
-          <span class="sub-headings">TESTIMONIALS FROM OUR GREATEST CLIENTS</span>
+          <h2 class="section-heading">What they say <span class="color-green">about us</span></h2>
+          <span class="sub-heading">TESTIMONIALS FROM OUR GREATEST CLIENTS</span>
           <ul class="testimonials">
             <li class="testimonial">
               <figure>
@@ -260,8 +266,8 @@
       <!-- Call Back Form Section Start -->
       <section class="call-back-section">
         <div class="wrapper">
-          <h2>Request a <span class="color-green">call back</span></h2>
-          <span class="sub-headings">ETIAM SUSCIPIT ANTE A ODIO CONSEQUAT</span>
+          <h2 class="section-heading">Request a <span class="color-green">call back</span></h2>
+          <span class="sub-heading">ETIAM SUSCIPIT ANTE A ODIO CONSEQUAT</span>
           <form action="#FIXME" method="post" class="form">
             <div class="form-grp-container">
               <div class="form-grp">
@@ -271,14 +277,14 @@
                 <input type="email" class="form-input" name="Email" placeholder="E-mail Address">
               </div>
               <div class="form-grp">
-                <input type="text" class="form-input" name="Subject" placeholder="subject">
+                <input type="text" class="form-input" name="Subject" placeholder="Subject">
               </div>
             </div>
             <div class="form-textarea">
-              <textarea name="Your Message" class="textarea" cols="30" rows="10"></textarea>
+              <textarea name="Your Message" class="textarea" placeholder="Your Message" cols="30" rows="7"></textarea>
             </div>
             <div class="form-control">
-              <input type="submit" class="btn submit-btn" value="Send Message">
+              <input type="submit" class="btn submit-btn"  value="Send Message">
             </div>
           </form>
         </div>
@@ -286,13 +292,15 @@
       <!-- Call Back Form Section End -->
 
       <!-- CLient Logo Section Start -->
-        <div class="wrapper client-logos-section">
-          <ul class="client-logos">
-            <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 1"></figure></li>
-            <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 2"></figure></li>
-            <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 3"></figure></li>
-            <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 4"></figure></li>
-          </ul>
+        <div class="client-logos-section">
+          <div class="wrapper">
+            <ul class="client-logos">
+              <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 1"></figure></li>
+              <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 2"></figure></li>
+              <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 3"></figure></li>
+              <li class="logo"><figure><img src="./assets/images/client-01.png" alt="Logo 4"></figure></li>
+            </ul>
+          </div>
         </div>
       <!-- CLient Logo Section End -->
     </main>
