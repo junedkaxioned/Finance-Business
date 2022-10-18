@@ -115,7 +115,7 @@ li {
 
 header {
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
   z-index: 9999;
   top: 0;
   background-color: transparent;
@@ -418,6 +418,67 @@ header.active .main-header .wrapper{
 }
 /* Financial Service Section CSS End */
 
+/* Our Solutions Section CSS Start */
+.our-solutions {
+  padding: 146px 0;
+  background-image: url("../../assets/images/fun-facts-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.business-growth {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.business-growth-content .sub-heading, 
+.business-growth-content .section-heading {
+  color: #fff;
+  text-align: left;
+}
+
+.business-growth-content .section-heading { text-transform: none; }
+.business-growth-content { flex-basis: 45%; }
+.counters { flex-basis: 55%; }
+
+.business-growth-content p {
+  padding: 40px 0;
+  color: #fff;
+  line-height: 2;
+}
+
+.business-growth-content p:last-of-type { padding-top: 0; }
+
+.counters { 
+  display: flex;
+  align-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px ;
+  justify-content: center;
+}
+
+.counter-container {
+  padding: 36px;
+  background-color: rgba(212, 212, 212, 0.1);
+  flex-basis: 45%;
+  text-align: center;
+}
+
+.counter-container h3{
+  padding-top: 20px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.counter {
+  font-size: 40px;
+  font-weight: 600;
+}
+/* Our Solutions Section CSS End */
 
 /*=================================
 main styling ends here
@@ -437,7 +498,6 @@ footer styling ends here
 /*media query for 995px starts here*/
 @media only screen and (min-width: 1024px) {
   
-
   .phone-no a:hover, 
   .phone-no a:hover::before { 
     opacity: 80%;
