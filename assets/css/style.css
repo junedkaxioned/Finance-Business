@@ -380,13 +380,14 @@ header.active .main-header .wrapper{
   font-size: 40px;
   font-weight: 600;
   text-align: center;
-  text-transform: capitalize;
 }
 
 .sub-heading {
   padding: 18px 0;
   display: block;
   color: #898170;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
   text-transform: uppercase;
 }
@@ -439,7 +440,6 @@ header.active .main-header .wrapper{
   text-align: left;
 }
 
-.business-growth-content .section-heading { text-transform: none; }
 .business-growth-content { flex-basis: 45%; }
 .counters { flex-basis: 55%; }
 
@@ -496,11 +496,9 @@ header.active .main-header .wrapper{
   padding: 35px 75px;
 }
 
-.about-company-content .sub-heading { text-align: left;}
-
+.about-company-content .sub-heading,
 .about-company-content .section-heading {
   text-align: left;
-  text-transform: none;
 }
 
 .about-company-content p {
@@ -510,6 +508,57 @@ header.active .main-header .wrapper{
 }
 .about-company-content p:last-of-type { padding-top: 0; }
 /* About Our Company Section CSS End */
+
+/* Testimonial Section CSS Start */
+.testimonial-section {
+  padding: 150px 0;
+  background-color: #F7F7F7;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.testimonial {
+  padding-top: 64px;
+  text-align: center
+} 
+
+.testimonial figure figcaption {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.testimonial h3 {
+  color: #252723;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.testimonial span {
+  padding: 12px 0;
+  display: block;
+  font-weight: 600;
+}
+
+.testimonial figure img {
+  margin: 25px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.testimonial p {
+  color: #7E807F;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 2;
+}
+/* Testimonial Section CSS End */
 
 
 /*=================================
