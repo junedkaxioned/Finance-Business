@@ -90,6 +90,7 @@ sub { bottom: -.25em; }
 body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 a { 
@@ -98,7 +99,7 @@ a {
 }
 
 li {
-  display: inline-block;
+  display: inline-block;  
   list-style-type: none;
 }
 
@@ -108,6 +109,13 @@ li {
   max-width: 1360px;
   width: 100%;
   padding: 0 95px 0 80px; 
+  margin: 0 auto;
+}
+
+.our-service-page .wrapper {
+  max-width: 1360px;
+  width: 100%;
+  padding: 0 124px 0 127px; 
   margin: 0 auto;
 }
 
@@ -665,6 +673,98 @@ header.active .main-header .wrapper{
   align-items: center;
 }
 /* Clint Logo Section CSS End */
+
+/* Servive Page Start */
+/* Service Page Banner Section Start */
+.our-sevice-banner-section {
+  background-color: #343434;
+  background-image: url('../../assets/images/page-heading-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.our-sevice-banner-section .wrapper {
+  padding:  270px 0 136px;
+  text-align: center;
+}
+
+.service-icon { 
+  width: 46px;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+.service-time,
+.service-phone a { 
+  padding: 12px 24px;
+}
+
+.service-nav-list { padding: 6px; }
+
+.our-sevice-banner-section .banner-heading {
+  padding: 0;
+  font-size: 38px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.our-sevice-banner-section .sub-heading {
+  color: #fff;
+  font-weight: normal;
+} 
+
+.our-services-section { padding: 140px 0; }
+
+.our-services-section .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.services-tabs {
+  flex-basis: 31%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.service-tab {
+  padding: 30px 30px;
+  display: flex;
+  align-items: center;
+  background-color: #A3C63B;
+  cursor: pointer;
+  justify-content: space-between;
+  transition: .5s;
+}
+
+
+.service-tab h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.services-contents {
+  flex-basis: 64%;
+}
+
+.service-tab:hover,
+.service-tab.active {
+  color: #fff;
+}
+
+.right-icon::after {
+  content: "\f105";
+  font-family: "FontAwesome";
+  cursor: pointer;
+  font-size: 22px;
+  float: right;
+  text-indent: 0;
+}
+
+/* Service Page Banner Section End */
+/* Servive Page End */
 
 /*=================================
 main styling ends here
