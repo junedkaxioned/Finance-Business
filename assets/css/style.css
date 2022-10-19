@@ -83,12 +83,13 @@ sub { bottom: -.25em; }
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 a { 
@@ -105,7 +106,8 @@ li {
 
 .home-page .wrapper {
   max-width: 1360px;
-  width: 88%; 
+  width: 100%;
+  padding: 0 95px 0 80px; 
   margin: 0 auto;
 }
 
@@ -139,12 +141,16 @@ header.active .main-header .wrapper{
   display: flex; 
 }
 
-.time,
+.time, 
 .phone-no a {
-  padding: 15px 20px;
-  font-size: 16px;
-  font-weight: 900;
+  padding: 14px 28px; 
+  font-size: 13px;
+  font-weight: 800;
   color: #fff;
+}
+
+.phone-no a {
+  padding: 14px 25px;
 }
 
 .time::before { content: "\f017"; }
@@ -165,9 +171,13 @@ header.active .main-header .wrapper{
 .text-indent { text-indent: -9999px; }
 
 .icon {
-  padding: 15px 18px;
+  width: 48px;
+  padding: 14px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "FontAwesome";
-  font-size: 16px;
+  font-size: 17px;
   color: #fff;
 }
 
@@ -186,17 +196,17 @@ header.active .main-header .wrapper{
 }
 
 .main-header .wrapper {
-  padding: 30px 0;
+  margin: 26px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar { display: flex; }
-.navbar li {  padding: 0 20px; }
+.navbar li {  padding: 0 17px; }
 
 .nav-list { 
-  padding: 10px 10px;
+  padding: 8px;
   border-bottom: transparent;
   color: #fff;
   font-size: 16px;
@@ -206,7 +216,7 @@ header.active .main-header .wrapper{
 
 .nav-list.active {
   color: #A3C63B;
-  border-bottom: 4px solid #A3C63B;
+  border-bottom: 3px solid #A3C63B;
 }
 
 .hamburger {
@@ -243,9 +253,14 @@ header.active .main-header .wrapper{
 =================================*/
 
 /* Banner Section CSS Start */
-.banner-section { margin-top: 30px;}
-.banner-section .wrapper { width: 100%; position: relative;}
 .color-green { color: #A3C63B; }
+.banner-section { margin-top: 30px; }
+
+.banner-section .wrapper { 
+  width: 100%; 
+  padding: 0;
+  position: relative;
+}   
 
 .sliders { 
   display: flex; 
@@ -261,7 +276,7 @@ header.active .main-header .wrapper{
 .slider.active { flex-basis: 100%; }
 
 .banner-content { 
-  padding: 0px 47% 0px 12%;
+  padding: 0px 42% 0px 12%;
   position: absolute;
   top: 50%;
   left: 0;
@@ -269,35 +284,38 @@ header.active .main-header .wrapper{
 }
 
 .top-head {
-  padding-bottom: 18px;
+  padding-bottom: 12px;
   display: inline-block;
   font-size: 22px;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
 }
 
 .banner-heading {
-  padding-right: 5%; 
+  padding-right: 12%; 
   color: #fff;
-  font-size: 46px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.3;
 }
 
 .banner-content p {
-  padding: 32px 0;
+  padding: 28px 0;
   color: #fff;
   line-height: 2;
 }
 
 .btn {
-  padding: 12px 26px;
+  padding: 10px 26px;
   border: 2px solid #A3C63B;
   border-radius: 50px;
   background-color: #A3C63B;
   color: #fff;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
 }
 
@@ -310,8 +328,8 @@ header.active .main-header .wrapper{
   left: 0;
 }
 
-.prev-btn::before { content: '\f053'; }
-.next-btn::before { content: '\f054'; }
+.prev-btn::before { content: '\f104'; }
+.next-btn::before { content: '\f105'; }
 .prev-btn { margin-left: 1%;}
 
 .prev-btn::before,
@@ -323,32 +341,35 @@ header.active .main-header .wrapper{
 
 .prev-btn, 
 .next-btn {
-  padding: 16px;
-  border-radius: 0 3px 3px 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
   position: inherit;
+  align-items: center;
   color: white;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 40px;
+  justify-content: center;
   transition: 0.6s ease;
 }
 
 .next-btn {
   margin-right: 1%;
+  border-radius: 50%;
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 /* Banner Section CSS End */
 
 /* Request a Call Section CSS Start */
 .request-a-call {
   width: 100%;
+  padding: 34px 0; 
   background-color: #A3C63B;
   color: #fff;
 }
 
 .request-a-call .wrapper { 
-  padding: 36px 0; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -380,14 +401,16 @@ header.active .main-header .wrapper{
   font-size: 40px;
   font-weight: 600;
   text-align: center;
+  line-height: 1.2;
 }
 
 .sub-heading {
-  padding: 18px 0;
+  padding: 12px 0;
   display: block;
   color: #898170;
   font-size: 16px;
   font-weight: 600;
+  letter-spacing: 1px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -397,23 +420,25 @@ header.active .main-header .wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 34px;
+  gap: 30px;
 }
 
 .service-content {
-  padding: 32px 36px;
+  padding: 32px 30px;
   background-color: #F7F7F7;
 }
 
 .service-content h3 {
   color: #252723;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 21px;
+  font-weight: 800;
   text-transform: capitalize;
 }
 
 .service-content p {
-  padding: 20px 0;
+  padding: 16px 0;
+  font-size: 15px;
+  font-weight: 500;
   color: #857B7A;
   line-height: 2;
 }
@@ -431,7 +456,6 @@ header.active .main-header .wrapper{
 .business-growth {
   display: flex;
   justify-content: space-between;
-  gap: 80px;
 }
 
 .business-growth-content .sub-heading, 
@@ -440,12 +464,18 @@ header.active .main-header .wrapper{
   text-align: left;
 }
 
-.business-growth-content { flex-basis: 45%; }
-.counters { flex-basis: 55%; }
+.business-growth-content .sub-heading { padding: 12px 0 ;}
+
+.business-growth-content { 
+  flex-basis: 42%; 
+  margin-left: 10px;
+}
+.counters { flex-basis: 49%; }
 
 .business-growth-content p {
-  padding: 40px 0;
+  padding: 35px 0;
   color: #fff;
+  font-size: 14px;
   line-height: 2;
 }
 
@@ -461,22 +491,22 @@ header.active .main-header .wrapper{
 }
 
 .counter-container {
-  padding: 36px;
+  padding: 34px 30px;
   background-color: rgba(212, 212, 212, 0.1);
   flex-basis: 45%;
   text-align: center;
 }
 
 .counter-container h3{
-  padding-top: 20px;
+  padding-top: 8px;
   color: #fff;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .counter {
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 38px;
+  font-weight: 700;
 }
 /* Our Solutions Section CSS End */
 
@@ -488,12 +518,11 @@ header.active .main-header .wrapper{
   background-color: #F7F7F7;
 }
 
-.about-company figure { flex-basis: 50%; }
+.about-company figure { flex-basis:  48.6%; }
 .about-company-content { flex-basis: 50%; }
 
 .about-company-content { 
-  flex-basis: 55%; 
-  padding: 35px 75px;
+  padding: 35px 50px 35px 60px;
 }
 
 .about-company-content .sub-heading,
@@ -502,7 +531,9 @@ header.active .main-header .wrapper{
 }
 
 .about-company-content p {
-  padding: 40px 0;
+  padding: 35px 0;
+  font-size: 14px;
+  font-weight: 500;
   color: #7E807F;
   line-height: 2;
 }
@@ -528,7 +559,7 @@ header.active .main-header .wrapper{
 } 
 
 .testimonial figure figcaption {
-  padding: 30px;
+  padding: 32px;
   border-radius: 8px;
   background-color: #fff;
 }
@@ -541,7 +572,7 @@ header.active .main-header .wrapper{
 }
 
 .testimonial span {
-  padding: 12px 0;
+  padding: 4px 0;
   display: block;
   font-weight: 600;
 }
@@ -554,10 +585,15 @@ header.active .main-header .wrapper{
 
 .testimonial p {
   color: #7E807F;
-  font-weight: 600;
   font-size: 15px;
   line-height: 2;
 }
+
+.testimonial p::after,
+.testimonial p::before {
+  content: '"';
+}
+
 /* Testimonial Section CSS End */
 
 /* Call Back Section CSS Start*/
@@ -638,6 +674,122 @@ main styling ends here
 footer styling starts here
 =================================*/ 
 
+footer {
+  background-color: #232323;
+  color: #fff;
+}
+
+.footer-heading { text-indent: -9999px;}
+
+.footer {
+  padding: 38px 0 80px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 37px;
+}
+
+.footer > li { 
+  flex-basis: 22.5%;
+} 
+
+h4 { 
+  padding: 32px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-about p {
+  font-size: 15px;
+  line-height: 2.1;
+}
+
+.footer .social-icons { gap: 10px;}
+
+.footer .social-icons .footer-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin: 26px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #232323;
+}
+
+.useful-links,
+.additional-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.useful-links li,
+.additional-pages li { 
+  font-size: 15px;  
+  line-height: 2;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.foot-frm-input,
+.foot-frm-textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  background-color: rgba(212, 212, 212, 0.1);
+}
+
+.foot-frm-textarea { border-radius: 25px; }
+
+.foot-frm-input::placeholder,
+.foot-frm-textarea::placeholder { 
+  color: #7E807F;
+}
+
+.copyright-section { 
+  padding: 30px 0;
+  background-color: #343434;
+  color: #DEE7E9;
+  font-size: 15px;
+  text-align: center;
+  word-spacing: 1px;
+}
+
+.copyright-section a { color: #DEE7E9;}
+
+.top-icon {
+  display: block;
+  position: fixed;
+  bottom: 3%;
+  right: 1.5%;
+}
+
+.top-icon::after {
+  content: "\f077";
+  font-family: "FontAwesome";
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 26px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #232323;
+  text-indent: 0;
+}
 
 
 /*=================================
