@@ -133,9 +133,14 @@ header {
 }
 
 header.active .main-header .wrapper{
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0;
   background-color: #fff;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.09);
 }
+
+header.active .nav-list { color: #A3C63B; }
 
 .top-bar { background-color: #A3C63B; }
 
@@ -310,7 +315,7 @@ header.active .main-header .wrapper{
 .slider.active { flex-basis: 100%; }
 
 .banner-content { 
-  padding: 0px 42% 0px 12%;
+  padding: 0 42% 0 12%;
   position: absolute;
   top: 50%;
   left: 0;
@@ -328,7 +333,7 @@ header.active .main-header .wrapper{
 }
 
 .banner-heading {
-  padding-right: 12%; 
+  padding-right: 40px; 
   color: #fff;
   font-size: 45px;
   font-weight: 700;
@@ -351,6 +356,7 @@ header.active .main-header .wrapper{
   font-size: 14px;
   font-weight: 800;
   text-transform: uppercase;
+  transition: .5s;
 }
 
 .slider .contact-us { margin: 8px 0 0 6px; }
@@ -556,6 +562,11 @@ header.active .main-header .wrapper{
 .about-company figure { flex-basis:  48.6%; }
 .about-company-content { flex-basis: 50%; }
 .about-company-content { padding: 35px 50px 35px 60px; }
+
+.about-company figure img { 
+  height: 100%;
+  object-fit: cover;
+ }
 
 .about-company-content .sub-heading,
 .about-company-content .section-heading {
@@ -763,11 +774,6 @@ header.active .main-header .wrapper{
 
 .services-contents { flex-basis: 63.1%; }
 
-.service-tab:hover,
-.service-tab.active {
-  color: #fff;
-}
-
 .right-icon::after {
   content: "\f105";
   cursor: pointer;
@@ -798,6 +804,23 @@ header.active .main-header .wrapper{
 .content.active {
   display: block;
   animation: fade .8s forwards;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+    transition: .8s;
+  }
+
+  50% {
+    opacity: 50%;
+    transition: .8s;  
+  }
+
+  100% {
+    opacity: 100%;
+    transition: .8s;
+  }
 }
 
 .contact-us-page .section-heading,
@@ -972,6 +995,7 @@ h4 {
   border: none;
   border-radius: 50px;
   background-color: rgba(212, 212, 212, 0.1);
+  color: #A3C63B;
   outline: none;
 }
 
@@ -994,10 +1018,10 @@ h4 {
 .copyright-section a { color: #DEE7E9;}
 
 .top-icon {
-  display: block;
+  display: none;
   position: fixed;
-  right: 1.5%;
-  bottom: 3%;
+  right: 2%;
+  bottom: 4%;
 }
 
 .top-icon::after {
@@ -1036,8 +1060,8 @@ h4 {
   
 .contact-us-page .copyright-section p,
 .our-service-page .copyright-section p {
-font-size: 14px;
-font-weight: 600;
+  font-size: 14px;
+  font-weight: 600;
 }
   
 .contact-us-page .useful-links li,
@@ -1097,21 +1121,245 @@ footer styling ends here
     background-color: rgba(0,0,0,0.8);
   }
 
-  @keyframes fade {
-    0%{
-      opacity: 0;
-      transition: .8s;
-    }
-
-    50% {
-      opacity: 50%;
-      transition: .8s;  
-    }
-
-    100% {
-      opacity: 100%;
-      transition: .8s;
-    }
+  .service-tab:hover,
+  .service-tab.active {
+    color: #fff;
   }
 
+  .btn:hover { 
+    background-color: transparent; 
+    color: #A3C63B;
+    transition: .5s;
+  }
+  
+  .form-control .btn:hover,
+  .request-a-call .contact-us:hover { 
+    background-color: #fff; 
+  }
+
+  .contact-us-page .form-control .btn:hover {
+    border-color: #A3C63B;
+    background-color: transparent;
+  }
+
+  .form-input:focus,
+  .textarea:focus {
+    background-color: #ececec;
+  }
+
+  .detail a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+  }
+
+  .top-icon:hover::after {
+    border-color: #212529;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+  }
+}
+
+@media only screen and  (min-width: 995px) and (max-width: 1200px){
+  
+  .home-page .wrapper { padding: 0 70px; }
+  .main-header .wrapper { margin: 16px 0; }
+  .section-heading { font-size: 32px; }
+  .banner-section .wrapper { padding: 0;}
+  .banner-content { padding: 15% 38% 8% 8%; }
+  .service-section { padding: 100px 0;}
+  .service-content { padding: 20px 25px;}
+  .business-growth-content { margin: 0; }
+  .business-growth-content p { padding: 28px 0; }
+  .counters { gap: 20px; }
+  .counter-container { padding: 30px 12px; }
+  .about-company-section { padding: 115px 0; }
+  .about-company-content { padding: 24px 40px; }
+  .form { margin-top: 50px; }
+  .client-logos-section { padding: 60px; }
+  .footer { padding: 30px 0 60px; } 
+  h4 { font-size: 20px; }
+
+  .top-head {
+    padding-bottom: 8px;
+    font-size: 18px;
+  }
+
+  .banner-heading {
+    padding: 0;
+    font-size: 40px; 
+  }
+
+  .financial-services {
+    padding-top: 50px;
+    gap: 20px;
+  }
+
+  .testimonial-section,
+  .call-back-section,
+  .our-solutions { 
+    padding: 80px 0; 
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 994px) {
+  .home-page .wrapper { padding: 0 5%; }
+  .banner-section .wrapper { padding: 0;}
+  .section-heading { font-size: 34px ;}
+  .navbar li { padding: 0 4px; }
+  .banner-content {padding: 10% 25% 0 8% }
+  .banner-content p { padding: 10px 0;}
+  .call-content { flex-basis: 75%; }
+  .service figure { display: flex; }
+  .business-growth-content { flex-basis: 50%; }
+  .business-growth-content p { padding: 20px 0;}
+  .about-company-content { padding: 24px 30px; }
+  .about-company-content p { padding: 18px 0; }
+  .form-grp-container { gap: 10px; }
+  .client-logos-section { padding: 30px 0; } 
+
+  .form { 
+    padding: 30px;
+    margin: 30px 0; 
+  }
+
+  .service-section,
+  .our-solutions { 
+    padding: 60px 0; 
+  }
+
+  .call-back-section,
+  .about-company-section,
+  .testimonial-section { 
+    padding: 80px 0;
+  }
+
+  .banner-heading {
+    padding: 0;
+    font-size: 30px;
+  }
+  
+  .top-head {
+    padding: 0;
+    font-size: 20px;
+  }
+  
+  .financial-services { 
+    padding: 50px 0; 
+    flex-direction: column;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .footer > li { flex-basis: 45%;}
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+  .about-company-content { padding: 24px 30px; }
+  .about-company-content p { padding: 18px 0; }
+  .section-heading { font-size: 34px ;}
+  .testimonial { padding-top: 40px; }
+  .form-textarea { padding: 24px 0;}
+  .client-logos-section { padding: 15px;}
+  .slider figure { height: 100vh; }
+
+  .banner-content { 
+    padding: 15% 10% 0;
+    text-align: center;
+  }
+  
+  .top-head { font-size: 18px; }
+
+  .banner-heading { 
+    padding: 0;
+    font-size: 30px; 
+  }
+
+  .slider figure img { 
+    height: 100%; 
+    object-fit: cover;
+  }
+
+  .request-a-call {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .client-logos { 
+    flex-wrap: wrap; 
+    gap: 10px;
+  }
+
+  .call-back-section,
+  .testimonial-section,
+  .about-company-section,
+  .service-section,
+  .our-solutions { 
+    padding: 60px 0; 
+  }
+
+  .footer,
+  .request-a-call .wrapper,
+  .testimonials,
+  .about-company,
+  .financial-services,
+  .business-growth {
+    flex-direction: column;
+  }
+
+  .business-growth-content { 
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .form-grp-container { 
+    gap: 5px;
+  }
+
+  .form {
+    margin: 25px 0;
+    padding: 20px 15px;
+  }
+
+  .footer { padding: 0 0 30px 0;}
+
+}
+
+
+
+/* Mobile Nav */
+@media only screen and (max-width: 768px){
+
+  .home-page .wrapper { padding: 0 3%; }
+  .banner-section .wrapper { padding: 0;}
+  .hamburger { display: block; }
+  .main-header { position: relative; }
+  
+  nav { 
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background-color: #C4DFAA;
+    transform: translateX(100%);
+    transition: .5s;
+  }
+
+  .navbar {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar li { 
+    margin-top: 30px;
+  }
+
+  .navbar li:first-child { margin: 0;}
 }
