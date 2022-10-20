@@ -115,7 +115,7 @@ li {
 .our-service-page .wrapper {
   max-width: 1360px;
   width: 100%;
-  padding: 0 124px 0 127px; 
+  padding: 0 125px 0 127px; 
   margin: 0 auto;
 }
 
@@ -125,7 +125,7 @@ li {
 
 header {
   width: 100%;
-  position: fixed;
+  position: fixed; 
   z-index: 9999;
   top: 0;
   background-color: transparent;
@@ -676,6 +676,24 @@ header.active .main-header .wrapper{
 
 /* Servive Page Start */
 /* Service Page Banner Section Start */
+
+
+.service-icon { 
+  width: 46px;
+  padding: 12px 0;
+  font-size: 16px;
+}
+
+.service-time,
+.service-phone a { 
+  padding: 12px 24px;
+}
+
+.our-service-page .navbar li { padding: 0 15px; }
+
+.service-nav-list { padding: 7px; }
+.our-service-page .navbar li:last-child { padding-right: 28px; }
+
 .our-sevice-banner-section {
   background-color: #343434;
   background-image: url('../../assets/images/page-heading-bg.jpg');
@@ -689,19 +707,6 @@ header.active .main-header .wrapper{
   text-align: center;
 }
 
-.service-icon { 
-  width: 46px;
-  padding: 12px 0;
-  font-size: 16px;
-}
-
-.service-time,
-.service-phone a { 
-  padding: 12px 24px;
-}
-
-.service-nav-list { padding: 6px; }
-
 .our-sevice-banner-section .banner-heading {
   padding: 0;
   font-size: 38px;
@@ -714,7 +719,10 @@ header.active .main-header .wrapper{
   font-weight: normal;
 } 
 
-.our-services-section { padding: 140px 0; }
+.our-services-section { 
+  padding: 140px 0; 
+  border-bottom: 0.1px solid #ececec;
+}
 
 .our-services-section .wrapper {
   display: flex;
@@ -723,7 +731,7 @@ header.active .main-header .wrapper{
 }
 
 .services-tabs {
-  flex-basis: 31%;
+  flex-basis: 31.5%;
   display: flex;
   gap: 10px;
   flex-direction: column;
@@ -739,14 +747,13 @@ header.active .main-header .wrapper{
   transition: .5s;
 }
 
-
 .service-tab h2 {
   font-size: 20px;
   font-weight: 700;
 }
 
 .services-contents {
-  flex-basis: 64%;
+  flex-basis: 63.1%;
 }
 
 .service-tab:hover,
@@ -762,6 +769,72 @@ header.active .main-header .wrapper{
   float: right;
   text-indent: 0;
 }
+
+.content { display: none; }
+
+.content h3 {
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.content p {
+  padding: 16px 0;
+  color: #7E807F;
+  font-size: 14px;
+  line-height: 2;
+}
+.content p:first-of-type { padding-top: 0; }
+.content p:last-of-type { padding-bottom: 0; }
+
+.content.active {
+  display: block;
+  animation: fade .8s forwards;
+}
+
+.our-service-page .section-heading { font-size: 36px; }
+.our-service-page .sub-heading { font-size: 14px; }
+.our-service-page .client-logos-section { padding: 60px;}
+
+.our-service-page .footer { 
+  padding: 12px 0 78px;
+  gap: 34px;
+}
+
+.our-service-page h4 { 
+  padding: 38px 0 32px 0;
+  font-size: 20px;
+}
+
+.our-service-page .footer-about p { font-size: 14px; }
+
+.our-service-page .copyright-section p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.our-service-page .useful-links li,
+.our-service-page .additional-pages li {
+  font-size: 14px;
+}
+
+.our-service-page .footer .social-icons .footer-icon {
+  width: 33px;
+  height: 33px;
+  font-size: 16px;
+}
+
+.our-service-page .foot-frm-input,
+.our-service-page .foot-frm-textarea {
+  padding: 10px 14px;
+  font-size: 13px; 
+}
+
+.our-service-page .foot-frm-input::placeholder,
+.our-service-page .foot-frm-textarea::placeholder {
+  font-weight: 600;
+}
+
 
 /* Service Page Banner Section End */
 /* Servive Page End */
@@ -912,12 +985,30 @@ footer styling ends here
   
   .nav-list:hover {
     color: #A3C63B;
-    border-bottom: 4px solid #A3C63B;
+    border-bottom: 3px solid #A3C63B;
   }
   
   .prev-btn:hover, 
   .next-btn:hover {
     background-color: rgba(0,0,0,0.8);
+  }
+
+  @keyframes fade {
+    0%{
+      opacity: 0;
+    transition: .8s;
+  
+    }
+    50% {
+      opacity: 50%;
+    transition: .8s;
+  
+    }
+    100% {
+      opacity: 100%;
+    transition: .8s;
+  
+    }
   }
 
 }
