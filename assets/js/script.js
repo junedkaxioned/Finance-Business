@@ -2,13 +2,19 @@
 var header = document.querySelector('header');
 var backToTop = document.querySelector('.top-icon');
 var hamBurger = document.querySelector('.hamburger');
-var navbar = document.querySelector('nav')
+var navbar = document.querySelector('nav');
+var tabs = document.querySelectorAll('.service-tab');
+var tabContents = document.querySelectorAll('.content');
+var navList = document.querySelectorAll('.nav-list')
 
-// EVents On Windows
+
+// Events On Windows Start
 window.addEventListener('scroll', function () {
   stickyNav();
   moveToTop();
 });
+// Events On Windows End
+
 
 // Sticky Nav Function Start
 function stickyNav() {
@@ -20,12 +26,27 @@ function stickyNav() {
 }
 // Sticky Nav Function End
 
+
 // Mobile Navbar Function Start
 hamBurger.addEventListener('click', function () {
   hamBurger.classList.toggle('active')
   navbar.classList.toggle('active')
 })
 // Mobile Navbar Function End
+
+
+// NavBar Menu Active Function Start
+var url = location.pathname;
+navList.forEach(function (listItem) {
+  var navURL = listItem.getAttribute('href');
+  listItem.classList.remove('active');
+  // Condition for Checking the url and the href is same 
+  if (url.replace('/','') === navURL) {
+    listItem.classList.add('active');
+  }
+})
+// NavBar Menu Active Function End
+
 
 // Back to top Function Start
 function moveToTop() {
@@ -39,3 +60,22 @@ function moveToTop() {
   });
 }
 // Back to top Function End
+
+
+// Tab Function Start
+function tabFunction(list, content) {
+  list.forEach(function (item, idx) {
+    // Events on Tab & accordion
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
+      for (var i = 0; i < list.length; i++) {
+        list[i].classList.remove('active');
+        content[i].classList.remove('active');
+      }    
+      this.classList.add('active');
+      content[idx].classList.add('active')
+    })
+  })
+}
+tabFunction(tabs, tabContents);
+// Tab Function End
