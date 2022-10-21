@@ -3,9 +3,11 @@ var header = document.querySelector('header');
 var backToTop = document.querySelector('.top-icon');
 var hamBurger = document.querySelector('.hamburger');
 var navbar = document.querySelector('nav');
+var navList = document.querySelectorAll('.nav-list')
 var tabs = document.querySelectorAll('.service-tab');
 var tabContents = document.querySelectorAll('.content');
-var navList = document.querySelectorAll('.nav-list')
+var counters = document.querySelectorAll('.counter');
+var counterContainer = document.querySelector('.counters')
 
 
 // Events On Windows Start
@@ -79,3 +81,24 @@ function tabFunction(list, content) {
 }
 tabFunction(tabs, tabContents);
 // Tab Function End
+
+
+// Counter Function Start
+// Function for each counter
+window.addEventListener('scroll', function () {
+  if(window.scrollY < counterContainer.offsetHeight)
+  counters.forEach(function (counter) {
+    var counterTraget = +(counter.getAttribute('data-target'));
+    var initial = counterTraget / 100 ;
+    var x = 1;
+    // Setinterval function 
+    var interval = setInterval(function () {
+      counter.innerText= Math.ceil(initial * x);
+      x++;
+      if (x > 100) {
+        clearInterval(interval);
+      }
+    }, 20)
+  })
+})
+// Counter Function End
