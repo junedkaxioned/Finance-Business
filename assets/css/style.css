@@ -1104,7 +1104,8 @@ footer styling ends here
 =================================*/ 
 
 /*media query starts*/
-/*media query for 995px starts here*/
+
+/* Hover Effects till 1024 */
 @media only screen and (min-width: 1024px) {
   
   .phone-no a:hover, 
@@ -1160,7 +1161,9 @@ footer styling ends here
     color: #fff;
   }
 }
+/* --------END------ */
 
+/* Responsive Start From 995 to 1200 px */
 @media only screen and  (min-width: 995px) and (max-width: 1200px){
   
   .main-header .wrapper { margin: 16px 0; }
@@ -1177,12 +1180,12 @@ footer styling ends here
   .form { margin-top: 50px; }
   .client-logos-section { padding: 60px; }
   .footer { padding: 30px 0 60px; } 
-  h4 { font-size: 20px; }
   .banner-section .wrapper { padding: 0; }
   .our-services-section { padding: 90px 0; }
   .contact-details { padding: 90px 0; }
   .contact-us-page .call-back-section { padding: 80px 0; }
   .contact-us-page .gmap .wrapper { padding: 0; }
+  h4 { font-size: 20px; }
 
   .contact-us-page .wrapper,
   .our-service-page .wrapper,
@@ -1218,7 +1221,9 @@ footer styling ends here
     padding: 80px 0; 
   }
 }
+/* Responsive End */
 
+/* Responsive Start From 769 to 994 px */
 @media only screen and (min-width: 769px) and (max-width: 994px) {
 
   .section-heading { font-size: 34px ;}
@@ -1245,8 +1250,8 @@ footer styling ends here
   .home-page .wrapper { 
     padding: 0 5%; 
   }
-  .banner-section .wrapper { padding: 0;}
 
+  .banner-section .wrapper { padding: 0;}
 
   .contact-us-page .client-logos-section,
   .our-service-page .client-logos-section,
@@ -1275,7 +1280,6 @@ footer styling ends here
   .our-solutions { 
     padding: 60px 0; 
   }
-
 
   .call-back-section,
   .about-company-section,
@@ -1306,7 +1310,9 @@ footer styling ends here
   .footer > li { flex-basis: 45%;}
 
 }
+/* Responsive End */
 
+/* Responsive start form 481 to 768 px */
 @media only screen and (min-width: 481px) and (max-width: 768px){
 
   .about-company-content { padding: 24px 30px; }
@@ -1416,8 +1422,9 @@ footer styling ends here
   }
 
 }
+/* Responsive End */
 
-
+/* Top Header Responsive start till 550px*/
 @media only screen and (max-width: 550px){
   
   .top-bar .wrapper {
@@ -1446,7 +1453,9 @@ footer styling ends here
   .social-icons a { padding: 10px 0;} 
   .time, .phone-no a { padding: 10px 2px;}
 }
+/* Top Header Responsive End till 550px*/
 
+/* Responsive till 480px Start */
 @media only screen and (max-width: 480px){
   
   .testimonials { gap: 0; }
@@ -1548,9 +1557,9 @@ footer styling ends here
   .counters { flex-direction: column; }
 
 }
+/* Responsive till 480px End */
 
-
-/* Mobile Nav */
+/* Mobile Nav Started */
 @media only screen and (max-width: 768px){
 
   .home-page .wrapper { padding: 0 3%; }
@@ -1604,3 +1613,4 @@ footer styling ends here
 
   .navbar li:first-child { margin: 0;}
 }
+/* Mobile Nav End */
