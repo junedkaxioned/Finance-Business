@@ -767,6 +767,11 @@ header.active .nav-list { color: #A3C63B; }
   transition: .5s;
 }
 
+.service-tab:hover,
+.service-tab.active {
+  color: #fff;
+}
+
 .service-tab h2 {
   font-size: 20px;
   font-weight: 700;
@@ -886,6 +891,7 @@ header.active .nav-list { color: #A3C63B; }
 .detail a {
   font-size: 15px;
   font-weight: 700;
+  color: #A3C63B;
 }
 
 .detail p {
@@ -1121,11 +1127,6 @@ footer styling ends here
     background-color: rgba(0,0,0,0.8);
   }
 
-  .service-tab:hover,
-  .service-tab.active {
-    color: #fff;
-  }
-
   .btn:hover { 
     background-color: transparent; 
     color: #A3C63B;
@@ -1162,10 +1163,8 @@ footer styling ends here
 
 @media only screen and  (min-width: 995px) and (max-width: 1200px){
   
-  .home-page .wrapper { padding: 0 70px; }
   .main-header .wrapper { margin: 16px 0; }
   .section-heading { font-size: 32px; }
-  .banner-section .wrapper { padding: 0;}
   .banner-content { padding: 15% 38% 8% 8%; }
   .service-section { padding: 100px 0;}
   .service-content { padding: 20px 25px;}
@@ -1179,6 +1178,24 @@ footer styling ends here
   .client-logos-section { padding: 60px; }
   .footer { padding: 30px 0 60px; } 
   h4 { font-size: 20px; }
+  .banner-section .wrapper { padding: 0; }
+  .our-services-section { padding: 90px 0; }
+  .contact-details { padding: 90px 0; }
+  .contact-us-page .call-back-section { padding: 80px 0; }
+  .contact-us-page .gmap .wrapper { padding: 0; }
+
+  .contact-us-page .wrapper,
+  .our-service-page .wrapper,
+  .home-page .wrapper { 
+    padding: 0 70px; 
+  }
+
+  .banner-section .wrapper { padding: 0;}
+
+  .contact-banner-section .wrapper,
+  .our-sevice-banner-section .wrapper { 
+    padding: 270px 0 136px; 
+  }
 
   .top-head {
     padding-bottom: 8px;
@@ -1203,8 +1220,7 @@ footer styling ends here
 }
 
 @media only screen and (min-width: 769px) and (max-width: 994px) {
-  .home-page .wrapper { padding: 0 5%; }
-  .banner-section .wrapper { padding: 0;}
+
   .section-heading { font-size: 34px ;}
   .navbar li { padding: 0 4px; }
   .banner-content {padding: 10% 25% 0 8% }
@@ -1216,7 +1232,39 @@ footer styling ends here
   .about-company-content { padding: 24px 30px; }
   .about-company-content p { padding: 18px 0; }
   .form-grp-container { gap: 10px; }
-  .client-logos-section { padding: 30px 0; } 
+  .our-services-section { padding: 90px 0; }
+  .contact-details { padding: 80px 0; }
+  .contact-us-page .call-back-section { padding: 60px 0; }
+  .contact-us-page .gmap .wrapper { padding: 0; }
+  .detials { gap: 10px;}
+  .detail:last-child p { padding: 16px 12px; }
+  .detail { padding: 50px 10px;}
+  
+  .our-service-page .wrapper,
+  .contact-us-page .wrapper,
+  .home-page .wrapper { 
+    padding: 0 5%; 
+  }
+  .banner-section .wrapper { padding: 0;}
+
+
+  .contact-us-page .client-logos-section,
+  .our-service-page .client-logos-section,
+  .client-logos-section { 
+    padding: 30px 0; 
+  } 
+
+  .contact-us-page .navbar li,
+  .our-service-page .navbar li { 
+    padding: 0 5px; 
+  }
+
+  .contact-banner-section .wrapper,
+  .our-sevice-banner-section .wrapper { 
+    padding: 270px 0 136px;
+  }
+
+  h1 { flex-basis: 20%; }
 
   .form { 
     padding: 30px;
@@ -1227,6 +1275,7 @@ footer styling ends here
   .our-solutions { 
     padding: 60px 0; 
   }
+
 
   .call-back-section,
   .about-company-section,
@@ -1259,17 +1308,57 @@ footer styling ends here
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px){
+
   .about-company-content { padding: 24px 30px; }
   .about-company-content p { padding: 18px 0; }
-  .section-heading { font-size: 34px ;}
   .testimonial { padding-top: 40px; }
   .form-textarea { padding: 24px 0;}
-  .client-logos-section { padding: 15px;}
-  .slider figure { height: 100vh; }
+  .form-grp-container { gap: 5px; }
+  .footer > li { flex-basis: 45%;}
+  .our-services-section { padding: 50px 0;}
+  .contact-details { padding: 60px 0; }
+  .contact-us-page .call-back-section { padding: 60px 0; }
+  .contact-us-page .gmap .wrapper { padding: 0; }  
+  .contact-details .detials { flex-direction: column; }
+  .detail:last-child p { padding: 16px 12px; }
+  
+  .our-service-page .section-heading,
+  .contact-us-page .section-heading,
+  .section-heading {
+    font-size: 34px;
+  }
+
+  .contact-us-page .client-logos-section,
+  .our-service-page .client-logos-section,
+  .client-logos-section { 
+    padding: 30px 15px; 
+  }
+
+  .our-services-section .wrapper { flex-direction: column; }
+
+  .services-tabs {
+    padding-bottom: 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .service-tab h2 { font-size: 17px; }
+
+  .service-tab { 
+    padding: 16px; 
+    flex-basis: 48%;
+    gap: 5px;
+  }
 
   .banner-content { 
     padding: 15% 10% 0;
     text-align: center;
+  }
+
+  .time,
+  .phone-no a {
+    padding: 14px 10px;
   }
   
   .top-head { font-size: 18px; }
@@ -1302,7 +1391,6 @@ footer styling ends here
     padding: 60px 0; 
   }
 
-  .footer,
   .request-a-call .wrapper,
   .testimonials,
   .about-company,
@@ -1316,29 +1404,180 @@ footer styling ends here
     text-align: center;
   }
 
-  .form-grp-container { 
-    gap: 5px;
-  }
-
   .form {
     margin: 25px 0;
     padding: 20px 15px;
   }
 
-  .footer { padding: 0 0 30px 0;}
+  .footer { 
+    padding: 0 0 30px 0;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 
 }
 
+
+@media only screen and (max-width: 550px){
+  
+  .top-bar .wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .time-and-contact {
+    width: 100%;
+    border-bottom: 1px solid #b7d072;
+    justify-content: space-evenly;
+  }
+
+  .social-icons { 
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .social-icons li:first-child a,
+  .social-icons li a,
+  .time-and-contact li:first-child,
+  .time-and-contact li  {
+    border: none;
+  }
+  
+  .social-icons a { padding: 10px 0;} 
+  .time, .phone-no a { padding: 10px 2px;}
+}
+
+@media only screen and (max-width: 480px){
+  
+  .testimonials { gap: 0; }
+  .testimonial { padding: 30px 0;}
+  .testimonial:last-of-type{ padding-bottom: 0; }
+  .form-grp-container { gap: 15px;}
+  .form-textarea { padding: 20px 0; }
+  .banner-content p { padding: 5px 0;}
+  .top-head { font-size: 16px; }
+  .form-grp { width: 100%; }
+  .footer .social-icons { justify-content: flex-start; }
+  .our-services-section { padding: 50px 0;}
+  .our-services-section .wrapper { flex-direction: column; }
+  .contact-details .detials { flex-direction: column; }
+  .contact-details { padding: 60px 0; }
+  .contact-us-page .call-back-section { padding: 60px 0; }
+  .contact-us-page .gmap .wrapper { padding: 0; }
+
+  .our-service-page .section-heading,
+  .contact-us-page .section-heading,
+  .section-heading {
+    font-size: 32px;
+  }
+
+  .our-service-page .sub-heading,
+  .contact-us-page .sub-heading,
+  .sub-heading {
+    font-size: 14px;
+  }
+
+  .services-tabs { 
+    width: 100%;
+    padding-bottom: 16px;
+  }
+
+  .service-tab { 
+    width: 100%; 
+    padding: 16px;
+  }
+
+  .banner-heading {
+    padding: 0;
+    font-size: 30px;
+  }
+
+  .banner-content {
+    padding: 20% 12% 0;
+    text-align: center;
+  }
+
+  .our-service-page .client-logos-section,
+  .contact-us-page .client-logos-section,
+  .client-logos-section { 
+    padding: 30px 0;
+  }
+
+  .call-back-section,
+  .testimonial-section,
+  .about-company-section,
+  .service-section,
+  .our-solutions { 
+    padding: 50px 0; 
+  }
+
+  .slider figure img { 
+    height: 100%; 
+    object-fit: cover;
+  }
+
+  .client-logos { 
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .request-a-call { padding: 24px 0;}
+
+  .footer { 
+    padding: 0px 0 50px;
+    flex-direction: column;
+  }
+
+  .form { 
+    padding: 20px 10px;
+    margin-top: 30px; 
+  }
+
+  .form-grp-container,
+  .request-a-call .wrapper,
+  .testimonials,
+  .about-company,
+  .financial-services,
+  .business-growth {
+    flex-direction: column;
+  }
+
+  .about-company-content { padding: 20px 16px;}
+  .about-company-content p { padding: 26px 0;}
+  .business-growth-content { margin-bottom: 30px;}
+  .counters { flex-direction: column; }
+
+}
 
 
 /* Mobile Nav */
 @media only screen and (max-width: 768px){
 
   .home-page .wrapper { padding: 0 3%; }
-  .banner-section .wrapper { padding: 0;}
   .hamburger { display: block; }
   .main-header { position: relative; }
+  header { background-color: #fff; }
+  .main-header .wrapper { margin: 0; }
+
+  .slider figure,
+  .our-sevice-banner-section,
+  .contact-banner-section {
+    height: 100vh;
+  }
+
+  .our-service-page .wrapper,
+  .contact-us-page .wrapper,
+  .home-page .wrapper { 
+    padding: 0 3%; 
+  }
+
+  .banner-section .wrapper { padding: 0;}
   
+  .contact-banner-section .wrapper,
+  .our-sevice-banner-section .wrapper  { 
+    padding: 270px 0 136px; 
+  }
+
   nav { 
     width: 100%;
     height: 100vh;
@@ -1349,6 +1588,8 @@ footer styling ends here
     transform: translateX(100%);
     transition: .5s;
   }
+
+  nav.active { transform: translateX(0%);}
 
   .navbar {
     height: 100%;
