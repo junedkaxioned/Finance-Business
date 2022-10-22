@@ -21,7 +21,7 @@ var subject = document.querySelector('.subject');
 var submitButton = document.querySelector('.submit-btn');
 var footerSubmit = document.querySelector('.foot-submit-btn')
 var inputs = document.querySelectorAll('.input');
-var errorText = document.querySelectorAll('.error-text');
+var footInputs = document.querySelectorAll('.foot-input');
 var sucessMsg = document.querySelector('.sucess');
 var nameReg = /^[a-zA-Z ]+$/;
 var emailReg = /^([a-z][a-z0-9\-\_\.]+[a-z0-9])\@([a-z]{2,})\.([a-z]{2,})$/;
@@ -124,9 +124,6 @@ navList.forEach(function (listItem) {
 // NavBar Menu Active Function End -------------------------------------------------------------------------------------
 
 
-
-
-
 // Back to top Function Start -------------------------------------------------------------------------------------
 function moveToTop() {
   if (window.scrollY > 15) {
@@ -170,12 +167,10 @@ function contactPageFunction() {
 }
 
 
-
-
 function formFunction() {
   // Form validation -------------------------------------------------------------------------------------
-// Function for getting inputs and removing error (blur)
-  
+  // Function for getting inputs and removing error (blur)
+  // Main Form Inputs
   inputs.forEach(function (input) {
     input.addEventListener('blur', function () {
       formErrors(input);
@@ -184,7 +179,15 @@ function formFunction() {
       formErrors(input);
     })
   })
-  
+  // Footer Form Inputs
+  footInputs.forEach(function (input) {
+    input.addEventListener('blur', function () {
+      formErrors(input);
+    })
+    input.addEventListener('keyup', function () {
+      formErrors(input);
+    })
+  })
   
   // function for Error
   function formErrors(input) {
@@ -200,7 +203,6 @@ function formFunction() {
       input.classList.remove('active');
       inputError.classList.remove('error-active')
   
-  
       // VALIDATION
       // Condition for Address
       if (input.name == "Email") {
@@ -213,7 +215,6 @@ function formFunction() {
           inputError.innerText = "Capital Letter Not Allowed";
         }
       } else if (input.name == "Subject") {
-        // Condition for Names
         if (subReg.test(input.value)) {
           input.classList.remove('active');
           inputError.classList.remove('error-active')
@@ -223,6 +224,7 @@ function formFunction() {
           inputError.innerText = "Symbols are Not Allowed";
         }
       } else {
+        // Condition for Names
         if (nameReg.test(input.value)) {
           input.classList.remove('active');
           inputError.classList.remove('error-active')
@@ -239,7 +241,7 @@ function formFunction() {
   // Events on Submit button
   submitButton.addEventListener('click', function (e) {
     e.preventDefault();
-    var activeError = document.querySelectorAll('.error-active');
+    var activeError = form.querySelectorAll('.error-active');
     // Conditon for input in filled or not
     if (fullName.value && email.value && subject.value && (activeError.length === 0)) { 
       var div = document.createElement('div');
@@ -253,26 +255,23 @@ function formFunction() {
       setTimeout(function() {
         thankYou.remove();
       }, 2000);
-  
       form.reset();
-  
     } else {
       inputs.forEach(function (input) {
         formErrors(input);
       })
     }
   })
-  
+
   footerSubmit.addEventListener('click', function (e) {
     e.preventDefault();
-    var activeError = document.querySelectorAll('.error-active');
-  
+    var activeError = footerForm.querySelectorAll('.error-active');
     // Conditon for input in filled or not
-    if ( footerFullName.value && footerEmail.value && (activeError.length === 0)) { 
+    if (footerFullName.value && footerEmail.value && (activeError.length === 0)) { 
         alert('Thank You For Submiting The Form')
         footerForm.reset();
     } else {
-      inputs.forEach(function (input) {
+      footInputs.forEach(function (input) {
         formErrors(input);
       })
     }
@@ -282,7 +281,7 @@ function formFunction() {
 }
 
 
-
+// Condition to run the function on pages
 if (document.body.classList.contains('home-page')) {
   homePage() ;
 } else if (document.body.classList.contains('our-service-page')){
