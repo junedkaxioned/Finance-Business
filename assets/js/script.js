@@ -1,4 +1,5 @@
 // DOM Elements
+var html = document.querySelector('html');
 var header = document.querySelector('header');
 var backToTop = document.querySelector('.top-icon');
 var hamBurger = document.querySelector('.hamburger');
@@ -58,7 +59,6 @@ function homePage() {
       x = bannerList.length - 1;
     }
     slider(x);
-    dotActive(x)
   })
   // Slider Function  End -------------------------------------------------------------------------------------
 
@@ -102,9 +102,9 @@ function stickyNav() {
 }
 // Sticky Nav Function End -------------------------------------------------------------------------------------
 
- 
 // Mobile Navbar Function Start -------------------------------------------------------------------------------------
 hamBurger.addEventListener('click', function () {
+  html.classList.toggle('active')
   hamBurger.classList.toggle('active')
   navbar.classList.toggle('active')
 })
