@@ -105,6 +105,8 @@ body {
   overflow: hidden;
 }
 
+html.active { overflow: hidden; }
+
 a { 
   display: inline-block;
   text-decoration: none; 
@@ -1932,6 +1934,8 @@ footer styling ends here
   .contact-banner-section {
     height: 100vh;
   }
+
+  header.active .nav-list { color: #fff; }
 
   .our-service-page .wrapper,
   .contact-us-page .wrapper,
