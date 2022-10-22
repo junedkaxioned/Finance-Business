@@ -363,7 +363,17 @@ header.active .nav-list { color: #A3C63B; }
       flex-basis: 0; 
 }
 
-.slider.active { -ms-flex-preferred-size: 100%; flex-basis: 100%; }
+.slider.active { 
+  -ms-flex-preferred-size: 100%; 
+  flex-basis: 100%; 
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  form { opacity: .4;}
+  to  { opacity: 1;}
+}
 
 .banner-content { 
   padding: 0 42% 0 12%;
@@ -1186,6 +1196,7 @@ footer {
 }
 
 .footer > li { -ms-flex-preferred-size: 22.5%; flex-basis: 22.5%; } 
+.footer li a { color: #fff;}
 
 h4 { 
   padding: 32px 0;
@@ -1428,7 +1439,8 @@ footer styling ends here
   .twitter:hover:after { color: #1da1f2; }
   .linkedin:hover:after { color: #0a66c2; }
   .behance:hover:after { color: #1769ff; }
-  
+  .footer li a:hover { color: #A4C63B;}
+
   .nav-list:hover {
     color: #A3C63B;
     border-bottom: 3px solid #A3C63B;
